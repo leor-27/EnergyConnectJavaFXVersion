@@ -11,103 +11,104 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane layoutX="-2.0" layoutY="-2.0" prefHeight="1080.0" prefWidth="1459.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.energyconnectjavafx.Controller.ProfileArnelEclarinalController">
- <content>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1058.0" prefWidth="1460.0">
-   <children>
-      <AnchorPane layoutX="1.0" layoutY="684.0" prefHeight="52.0" prefWidth="1619.0" style="-fx-background-color: #454E57;">
-         <children>
+<ScrollPane layoutX="-2.0" layoutY="-2.0" prefHeight="1080.0" prefWidth="1459.0" style=" -fx-hbar-policy: never; -fx-vbar-policy: never; -fx-background-color: transparent; " xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="energyfm.energyconnect.energyconnectjavafxabout.Controllers.ProfileArnelEclarinalController">
+  <content>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1058.0" prefWidth="1460.0">
+      <children>
+        <AnchorPane layoutX="1.0" layoutY="684.0" prefHeight="52.0" prefWidth="1619.0" style="-fx-background-color: #454E57;">
+          <children>
             <AnchorPane layoutX="13.0" layoutY="24.0" prefWidth="86.0" />
-         </children>
-      </AnchorPane>
-            <AnchorPane layoutX="2.0" layoutY="985.0" prefHeight="74.0" prefWidth="1459.0" style="-fx-background-color: #1C5186;">
-                     <children>
-                  <Text fill="WHITE" layoutX="1179.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Privacy Policy | Energy FM © 2025" wrappingWidth="250.42926788330072">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Text>
-                     </children></AnchorPane>
-            <StackPane layoutX="0.0" layoutY="0.0" prefHeight="120.0" prefWidth="1460.0">
+          </children>
+        </AnchorPane>
+        <AnchorPane layoutX="2.0" layoutY="985.0" prefHeight="74.0" prefWidth="1459.0" style="-fx-background-color: #1C5186;">
+          <children>
+            <Text fill="WHITE" layoutX="1167.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Privacy Policy | Energy FM © 2025" wrappingWidth="277.4292678833007">
+              <font>
+                <Font size="17.0" />
+              </font>
+            </Text>
+          </children></AnchorPane>
+        <StackPane layoutX="0.0" layoutY="0.0" prefHeight="120.0" prefWidth="1460.0">
 
-                <!-- Header background image -->
-                <ImageView fitHeight="735.0" fitWidth="1461.0" pickOnBounds="true" preserveRatio="true">
-                    <effect>
-                        <DropShadow />
-                    </effect>
-                    <image>
-                        <Image url="@../../../../../../../../../../../Applications/XAMPP/xamppfiles/htdocs/EnergyConnect/frontend/images/header_home.png" />
-                    </image>
-                </ImageView>
-                <!-- Logo (top-left) -->
-                <ImageView fx:id="logoHomepage" fitHeight="85.0" fitWidth="154.0" onMouseClicked="#goToHomepage" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" StackPane.alignment="TOP_LEFT">
-                    <image>
-                        <Image url="@../Images/logo.png" />
-                    </image>
-                    <StackPane.margin>
-                        <Insets left="25.0" top="20.0" />
-                    </StackPane.margin>
-                </ImageView>
+          <!-- Header background image -->
+          <ImageView fitHeight="735.0" fitWidth="1461.0" pickOnBounds="true" preserveRatio="true">
+            <effect>
+              <DropShadow />
+            </effect>
+            <image>
+              <Image url="@../../../../../../../../../../../Applications/XAMPP/xamppfiles/htdocs/EnergyConnect/frontend/images/header_home.png" />
+            </image>
+          </ImageView>
+          <!-- Logo (top-left) -->
+          <ImageView fx:id="logoHomepage" fitHeight="85.0" fitWidth="154.0" onMouseClicked="#goToHomepage" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" StackPane.alignment="TOP_LEFT">
+            <image>
+              <Image url="@../Images/logo.png" />
+            </image>
+            <StackPane.margin>
+              <Insets left="25.0" top="20.0" />
+            </StackPane.margin>
+          </ImageView>
 
-                <!-- Menu button (top-right) -->
-                <ImageView fx:id="menuButton" fitHeight="21.0" fitWidth="24.0" onMouseClicked="#toggleNavMenu" pickOnBounds="true" style="-fx-cursor: hand;" StackPane.alignment="TOP_RIGHT">
-                    <image>
-                        <Image url="@../Images/menu.png" />
-                    </image>
-                    <StackPane.margin>
-                        <Insets right="65.0" top="35.0" />
-                    </StackPane.margin>
-                </ImageView>
+          <!-- Menu button (top-right) -->
+          <ImageView fx:id="menuButton" fitHeight="21.0" fitWidth="24.0" onMouseClicked="#toggleNavMenu" pickOnBounds="true" style="-fx-cursor: hand;" StackPane.alignment="TOP_RIGHT">
+            <image>
+              <Image url="@../Images/menu.png" />
+            </image>
+            <StackPane.margin>
+              <Insets right="65.0" top="35.0" />
+            </StackPane.margin>
+          </ImageView>
 
-            </StackPane>
-            <VBox fx:id="navMenu" layoutX="1260.0" layoutY="80.0" managed="false" prefHeight="136.0" prefWidth="162.0" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-padding: 8px; -fx-background-radius: 5px;" visible="false">
-               <children>
-                  <Text fx:id="aboutPageNav" layoutX="10.0" layoutY="30.0" onMouseClicked="#goToAbout" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="About" textAlignment="CENTER" wrappingWidth="152.62521362304688">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="profilesPageNav" onMouseClicked="#goToMainProfile" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="Profiles" textAlignment="CENTER" wrappingWidth="152.62521362304688">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="programsPageNav" layoutX="10.0" layoutY="56.0" onMouseClicked="#goToPrograms" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="Programs" textAlignment="CENTER" wrappingWidth="152.62521362304688">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="streamPageNav" layoutX="10.0" layoutY="82.0" onMouseClicked="#goToStream" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="Stream" textAlignment="CENTER" wrappingWidth="152.62521362304688">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="newsPageNav" layoutX="10.0" layoutY="108.0" onMouseClicked="#goToNews" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="News" textAlignment="CENTER" wrappingWidth="152.62521362304688">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Text>
-               </children>
-               <effect>
-                  <DropShadow radius="4.75" width="0.0" />
-               </effect>
-            </VBox>
-            <ImageView fitHeight="577.0" fitWidth="444.0" layoutX="513.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../../../Applications/XAMPP/xamppfiles/htdocs/EnergyConnect/frontend/images/arnel_elcarinal%20copy.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="kuyaBokProfile" fitHeight="51.0" fitWidth="56.0" layoutX="404.0" layoutY="325.0" onMouseClicked="#goToKuyaBok" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-               <image>
-                  <Image url="@../../../../../../../../../../../Applications/XAMPP/xamppfiles/htdocs/EnergyConnect/frontend/images/leftbutton.png" />
-               </image>
-            </ImageView>
-   <Text layoutX="534.0" layoutY="853.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: Segoe UI; -fx-font-weight: 900; -fx-font-size: 50px;" text="ARNEL ECLARINAL" wrappingWidth="425.8492431640625">
-      <font>
-         <Font name="System Bold" size="50.0" />
-      </font>
-   </Text>
-   </children>
-</AnchorPane>
-</content>
+        </StackPane>
+        <VBox fx:id="navMenu" layoutX="1260.0" layoutY="80.0" managed="false" prefHeight="136.0" prefWidth="162.0" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-padding: 8px; -fx-background-radius: 5px;" visible="false">
+          <children>
+            <Text fx:id="aboutPageNav" layoutX="10.0" layoutY="30.0" onMouseClicked="#goToAbout" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="About" textAlignment="CENTER" wrappingWidth="152.62521362304688">
+              <font>
+                <Font name="System Bold" size="18.0" />
+              </font>
+            </Text>
+            <Text fx:id="profilesPageNav" onMouseClicked="#goToMainProfile" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="Profiles" textAlignment="CENTER" wrappingWidth="152.62521362304688">
+              <font>
+                <Font name="System Bold" size="18.0" />
+              </font>
+            </Text>
+            <Text fx:id="programsPageNav" layoutX="10.0" layoutY="56.0" onMouseClicked="#goToPrograms" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="Programs" textAlignment="CENTER" wrappingWidth="152.62521362304688">
+              <font>
+                <Font name="System Bold" size="18.0" />
+              </font>
+            </Text>
+            <Text fx:id="streamPageNav" layoutX="10.0" layoutY="82.0" onMouseClicked="#goToStream" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="Stream" textAlignment="CENTER" wrappingWidth="152.62521362304688">
+              <font>
+                <Font name="System Bold" size="18.0" />
+              </font>
+            </Text>
+            <Text fx:id="newsPageNav" layoutX="10.0" layoutY="108.0" onMouseClicked="#goToNews" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="News" textAlignment="CENTER" wrappingWidth="152.62521362304688">
+              <font>
+                <Font name="System Bold" size="18.0" />
+              </font>
+            </Text>
+          </children>
+          <effect>
+            <DropShadow radius="4.75" width="0.0" />
+          </effect>
+        </VBox>
+        <ImageView fitHeight="577.0" fitWidth="444.0" layoutX="513.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../../../../../../../../../Applications/XAMPP/xamppfiles/htdocs/EnergyConnect/frontend/images/arnel_elcarinal%20copy.png" />
+          </image>
+        </ImageView>
+        <ImageView fx:id="leftButton" fitHeight="51.0" fitWidth="56.0" layoutX="404.0" layoutY="325.0" onMouseClicked="#goToPreviousDJ" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+          <image>
+            <!-- Keep your existing image URL -->
+            <Image url="@../../../../../../../../../../../Applications/XAMPP/xamppfiles/htdocs/EnergyConnect/frontend/images/leftbutton.png" />
+          </image>
+        </ImageView>
+        <Text layoutX="531.0" layoutY="834.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: Segoe UI; -fx-font-weight: 900; -fx-font-size: 50px;" text="ARNEL ECLARINAL" textAlignment="CENTER" wrappingWidth="425.8492431640625">
+          <font>
+            <Font name="System Bold" size="50.0" />
+          </font>
+        </Text>
+      </children>
+    </AnchorPane>
+  </content>
 </ScrollPane>
