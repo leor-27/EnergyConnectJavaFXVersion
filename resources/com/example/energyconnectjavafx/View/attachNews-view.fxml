@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.StackPane?>
+
+<VBox prefHeight="900.0" prefWidth="1400.0"
+      style="-fx-background-color: white;"
+      xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.energyconnectjavafx.Controller.AttachNewsController">
+
+    <children>
+        <!-- HEADER -->
+        <StackPane prefHeight="102.0" prefWidth="1400.0">
+            <HBox alignment="CENTER_LEFT"
+                  spacing="20.0"
+                  style="-fx-background-color: #1a4a7c;">
+                <children>
+                    <ImageView fx:id="logoAdminHomepage"
+                               fitHeight="85.0"
+                               fitWidth="165.0"
+                               onMouseClicked="#goToAdminHome"
+                               preserveRatio="true"
+                               style="-fx-cursor: hand;">
+                        <image>
+                            <Image url="@../Images/logo.png"/>
+                        </image>
+                    </ImageView>
+
+                    <Region HBox.hgrow="ALWAYS"/>
+
+                    <ImageView fx:id="menuButton"
+                               fitHeight="21.0"
+                               fitWidth="24.0"
+                               onMouseClicked="#toggleNavMenu"
+                               preserveRatio="true"
+                               style="-fx-cursor: hand;">
+                        <image>
+                            <Image url="@../Images/menu.png"/>
+                        </image>
+                    </ImageView>
+                </children>
+                <padding>
+                    <Insets left="30" right="30"/>
+                </padding>
+            </HBox>
+            <!-- NAV MENU -->
+            <VBox fx:id="navMenu"
+                  StackPane.alignment="TOP_RIGHT"
+                  visible="false"
+                  managed="false"
+                  prefWidth="160"
+                  maxWidth="160"
+                  alignment="CENTER"
+                  style="-fx-background-color: white;
+                         -fx-padding: 8;
+                         -fx-border-radius: 5px;
+                         -fx-background-radius: 5px; ">
+                <StackPane.margin>
+                    <Insets top="100" right="25"/>
+                </StackPane.margin>
+
+                <Text text="Logout"
+                      onMouseClicked="#logout"
+                      style="-fx-cursor: hand;
+                             -fx-font-size: 18;
+                             -fx-font-weight: bold;"/>
+            </VBox>
+        </StackPane>
+        <!-- CONTENT -->
+        <ScrollPane fitToWidth="true"
+                    VBox.vgrow="ALWAYS"
+                    style="-fx-background-color: white; -fx-background-insets: 0;">
+            <content>
+                <VBox spacing="25.0"
+                      prefWidth="1398.0"
+                      style="-fx-background-color: white;">
+                    <padding>
+                        <Insets top="30" left="50" right="50" bottom="40"/>
+                    </padding>
+
+                    <children>
+                        <Text text="ADMIN DASHBOARD">
+                            <font>
+                                <Font name="System Bold" size="32"/>
+                            </font>
+                        </Text>
+
+                        <HBox spacing="15">
+                            <Button fx:id="attachNewsButton"
+                                    onMouseClicked="#goToAttachNews"
+                                    prefHeight="46"
+                                    prefWidth="143"
+                                    text="Attach News"
+                                    textFill="WHITE"
+                                    style="-fx-background-color: #1C5186; -fx-background-radius: 5; -fx-cursor: hand;">
+                                <font>
+                                    <Font name="System Bold" size="16"/>
+                                </font>
+                                <graphic>
+                                    <ImageView fitHeight="20" fitWidth="19" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../Images/attach_news.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+
+                            <Button fx:id="addProgramsButton"
+                                    onMouseClicked="#goToAddPrograms"
+                                    prefHeight="46"
+                                    prefWidth="143"
+                                    text="Add Programs"
+                                    textFill="WHITE"
+                                    style="-fx-background-color: #1C5186; -fx-background-radius: 5; -fx-cursor: hand;">
+                                <font>
+                                    <Font name="System Bold" size="16"/>
+                                </font>
+                                <graphic>
+                                    <ImageView fitHeight="17" fitWidth="16" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../Images/add_programs.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                        </HBox>
+
+                        <VBox spacing="20"
+                              style="-fx-background-color: #eeeeee; -fx-background-radius: 10; -fx-padding: 30;">
+                            <children>
+
+                                <TextField fx:id="newsLinkField"
+                                           prefHeight="40"
+                                           promptText="Attach News Link Here"
+                                           style="-fx-background-color: white; -fx-border-color: #ccc;"/>
+
+                                <HBox spacing="30">
+                                    <children>
+
+                                        <VBox prefWidth="400"
+                                              spacing="10"
+                                              style="-fx-background-color: white; -fx-border-color: #ccc; -fx-padding: 15;">
+                                            <children>
+                                                <Text text="Category/s: "
+                                                      style="-fx-font-weight: bold;"/>
+
+                                                <GridPane hgap="20" vgap="10">
+
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES"/>
+                                                        <ColumnConstraints hgrow="SOMETIMES"/>
+                                                        <ColumnConstraints hgrow="SOMETIMES"/>
+                                                    </columnConstraints>
+
+                                                    <rowConstraints>
+                                                        <RowConstraints/>
+                                                        <RowConstraints/>
+                                                        <RowConstraints/>
+                                                        <RowConstraints/>
+                                                        <RowConstraints/>
+                                                        <RowConstraints/>
+                                                    </rowConstraints>
+
+                                                    <children>
+                                                        <CheckBox fx:id="catBusiness" text="Business" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                                                        <CheckBox fx:id="catEducation" text="Education" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                                                        <CheckBox fx:id="catEvents" text="Events" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                                                        <CheckBox fx:id="catLocal" text="Local" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                                                        <CheckBox fx:id="catPublicService" text="Public Service" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                                                        <CheckBox fx:id="catStationNews" text="Station News" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+
+                                                        <CheckBox fx:id="catCulture" text="Culture" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                                                        <CheckBox fx:id="catEntertainment" text="Entertainment" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                                                        <CheckBox fx:id="catHealth" text="Health" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                                                        <CheckBox fx:id="catMusic" text="Music" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                                                        <CheckBox fx:id="catScience" text="Science" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                                                        <CheckBox fx:id="catTechnology" text="Technology" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+                                                        <CheckBox fx:id="catEconomy" text="Economy" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                                                        <CheckBox fx:id="catEnvironment" text="Environment" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                                                        <CheckBox fx:id="catLifestyle" text="Lifestyle" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                                                        <CheckBox fx:id="catPolitics" text="Politics" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                                                        <CheckBox fx:id="catSports" text="Sports" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+                                                        <CheckBox fx:id="catWeather" text="Weather" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+                                                    </children>
+
+                                                </GridPane>
+                                            </children>
+                                        </VBox>
+
+                                        <VBox spacing="15" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <TextField fx:id="headlineField" prefHeight="40" promptText="Headline"/>
+                                                <TextField fx:id="authorField" prefHeight="40" promptText="Author's Name"/>
+                                                <TextField fx:id="orgField" prefHeight="40" promptText="News Organization/Company"/>
+                                                <TextArea fx:id="descArea" prefHeight="150" promptText="Description" wrapText="true"/>
+                                            </children>
+                                        </VBox>
+
+                                    </children>
+                                </HBox>
+
+                                <HBox alignment="BOTTOM_RIGHT" spacing="20">
+                                    <children>
+                                        <TextField fx:id="imageUrlField"
+                                                   prefHeight="40"
+                                                   prefWidth="400"
+                                                   promptText="Image URL (https://...)"
+                                                   HBox.hgrow="ALWAYS"/>
+
+                                        <Button text="Add"
+                                                prefHeight="45"
+                                                prefWidth="120"
+                                                fx:id="saveNewsButton"
+                                                onAction="#handleSaveNews"
+                                                textFill="WHITE"
+                                                style="-fx-background-color: #1a4a7c; -fx-cursor: hand;">
+                                            <font>
+                                                <Font name="System Bold" size="14"/>
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </HBox>
+
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+        <!-- FOOTER -->
+        <HBox alignment="CENTER_RIGHT"
+              prefHeight="68"
+              style="-fx-background-color: #1a4a7c;">
+            <children>
+                <Text text="Privacy Policy | Energy FM © 2025" fill="WHITE">
+                    <font>
+                        <Font size="17"/>
+                    </font>
+                </Text>
+            </children>
+            <padding>
+                <Insets right="40"/>
+            </padding>
+        </HBox>
+
+    </children>
+</VBox>
