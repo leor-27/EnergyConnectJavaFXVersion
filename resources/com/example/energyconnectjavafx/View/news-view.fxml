@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToWidth="true" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.energyconnectjavafx.Controller.NewsController">
+   <content>
+      <VBox>
+         <children>
+            <StackPane alignment="TOP_RIGHT" minHeight="350.0" minWidth="1440.0">
+               <children>
+                  <ImageView fitHeight="400.0" fitWidth="1920.0" pickOnBounds="true" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../../../../../../../../../Applications/XAMPP/xamppfiles/htdocs/EnergyConnect/frontend/images/header_photo%20copy.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="logoHomepage"
+                                 onMouseClicked="#goToHomepage"
+                                 mouseTransparent="false" fitHeight="75.0" fitWidth="130.0" pickOnBounds="true" StackPane.alignment="TOP_LEFT" style="-fx-cursor: hand;">
+                     <StackPane.margin>
+                        <Insets bottom="5.0" left="8.0" right="5.0" top="10.0" />
+                     </StackPane.margin>
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <VBox mouseTransparent="true" alignment="CENTER" fillWidth="false" prefHeight="400.0" prefWidth="1862.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="62.0" prefWidth="1095.0" style="-fx-font-weight: 900; -fx-font-size: 65px;" text="ENERGY FEATURED NEWS" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Segoe UI Bold" size="65.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="72.0" prefWidth="966.0" text="Pangga, updated ka na ba? Stay in the loop with ENERGY FM’s featured news! From the latest happenings to must-know updates, we’ve gathered the top stories right here. Check out what’s making headlines and stay informed anytime." textAlignment="CENTER" textFill="#ffec40" wrapText="true" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets left="30.0" right="30.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView
+                          fx:id="menuButton"
+                          fitHeight="21.0"
+                          fitWidth="24.0"
+                          StackPane.alignment="TOP_RIGHT"
+                          style="-fx-cursor: hand;"
+                          onMouseClicked="#toggleNavMenu">
+                      <image>
+                          <Image url="@../Images/menu.png"/>
+                      </image>
+                      <StackPane.margin>
+                          <Insets top="20" right="30"/>
+                      </StackPane.margin>
+                  </ImageView>
+<VBox fx:id="navMenu"
+      visible="false"
+      managed="false"
+      maxWidth="160"
+      prefWidth="160"
+      maxHeight="150"
+      prefHeight="150"
+      minHeight="150"
+      alignment="CENTER"
+      style="
+          -fx-background-color: white;
+          -fx-background-radius: 6;
+          -fx-padding: 10;
+          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+          -fx-cursor: hand;
+      "
+      StackPane.alignment="TOP_RIGHT">
+    <StackPane.margin>
+        <Insets top="60" right="30"/>
+    </StackPane.margin>
+
+    <children>
+        <Label text="About" onMouseClicked="#goToAbout" styleClass="nav-item"
+               style="-fx-cursor: hand; -fx-font-weight: 700; -fx-font-size: 18px;"/>
+        <Label text="Profiles" onMouseClicked="#goToMainProfile" styleClass="nav-item"
+               style="-fx-cursor: hand; -fx-font-weight: 700; -fx-font-size: 18px;"/>
+        <Label text="Programs" onMouseClicked="#goToPrograms" styleClass="nav-item"
+               style="-fx-cursor: hand; -fx-font-weight: 700; -fx-font-size: 18px;"/>
+        <Label text="Stream" onMouseClicked="#goToStream" styleClass="nav-item"
+               style="-fx-cursor: hand; -fx-font-weight: 700; -fx-font-size: 18px;"/>
+        <Label text="News" onMouseClicked="#goToNews" styleClass="nav-item"
+               style="-fx-cursor: hand; -fx-font-weight: 700; -fx-font-size: 18px;"/>
+    </children>
+</VBox>
+               </children>
+            </StackPane>
+            <HBox minHeight="45.0" style="-fx-background-color: #454E57;" VBox.vgrow="ALWAYS">
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" choke="0.57" height="49.07" radius="11.7675" width="0.0">
+                     <color>
+                        <Color opacity="0.25" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </HBox>
+            <HBox minHeight="400.0" minWidth="1440.0" spacing="20.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="featuredImage" fitHeight="350.0" fitWidth="504.0" pickOnBounds="true" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../images/ahtisa_photo.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox minHeight="350.0" minWidth="890.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <StackPane prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 50;">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </StackPane>
+                              <Label fx:id="featuredAuthor" contentDisplay="CENTER" prefHeight="22.0" prefWidth="117.0" text="Hannah Mallorca" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Circle fill="#393939" radius="2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                                 <HBox.margin>
+                                    <Insets top="1.0" />
+                                 </HBox.margin>
+                              </Circle>
+                              <Label fx:id="featuredDateTime" text="20 minutes ago">
+                                 <font>
+                                    <Font name="Segoe UI" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="120.0" prefWidth="1355.0">
+                           <children>
+                              <Label fx:id="featuredHeadline" minHeight="-Infinity" minWidth="-Infinity" prefHeight="131.0" prefWidth="900.0" text="Ahtisa Manalo comes home to overwhelming support from fans" wrapText="true">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="40.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label fx:id="featuredSummary" alignment="TOP_LEFT" prefHeight="162.0" prefWidth="891.0" text="Despite not winning the Miss Universe crown, Ahtisa Manalo felt like a queen upon coming home to overwhelming support from fans. Manalo arrived in the Philippines via Terminal 1 of the Ninoy Aquino International Airport (NAIA) on Tuesday, Nov. 25, at around dawn, and was greeted by a crowd of fans, members of the press, and pageant vloggers, aiming to get a chance to see her up close." wrapText="true" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Label prefHeight="18.0" prefWidth="701.0" text="Latest News">
+               <font>
+                  <Font name="Segoe UI Semibold" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="35.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="50.0" prefWidth="200.0" spacing="480.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="45.0" prefWidth="797.0" spacing="5.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 50;">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/search_icon.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <TextField fx:id="searchField" prefHeight="35.0" prefWidth="742.0" promptText=" Search news here..." style="-fx-background-color: transparent; -fx-background-insets: 0; -fx-prompt-text-fill: rgba(0, 0, 0, 0.5);" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <ComboBox fx:id="newsSorter" minWidth="-Infinity" prefHeight="30.0" prefWidth="185.0" promptText="NAME" style="-fx-background-color: rgba(255, 236, 64, 1); -fx-background-radius: 20; -fx-text-fill: rgba(0, 0, 0, 1); -fx-font-size: 15;">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <ScrollPane fx:id="newsScroll" fitToHeight="true" pannable="true" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <content>
+                  <HBox fx:id="newsContainer" alignment="CENTER_LEFT" fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="550.0" spacing="15">
+                     <padding>
+                        <Insets bottom="10.0" left="40.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="520.0" prefWidth="350.0" style="-fx-background-color: rgba(238, 238, 238, 1); -fx-background-radius: 10;">
+                           <effect>
+                              <DropShadow blurType="TWO_PASS_BOX" />
+                           </effect>
+                           <children>
+                              <ImageView fitHeight="270.0" fitWidth="289.0" pickOnBounds="true">
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@../images/suspension_photo.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="58.0" prefWidth="324.0" text="Classes suspended, shifted to alternate mode in parts of PH on Nov. 25" wrapText="true" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Segoe UI Black" size="16.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="318.0" spacing="8.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="71.0" text="Inquirer Net">
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Circle fill="#393939" radius="3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                                    <Label text="3 hours ago" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Label prefHeight="70.0" prefWidth="330.0" text="MANILA, Philippines – Numerous local government units have either suspended classes or  shifted to alternative delivery mode (ADM) / alternative learning modalities on Tuesday, due to the effects of Tropical Depression Verbena." wrapText="true" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="15.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Segoe UI" size="12.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="30.0" prefWidth="327.0" spacing="120.0" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="129.0" text="By: Keith Clores">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="27.0" prefWidth="70.0" style="-fx-background-color: rgba(116, 114, 114, 1); -fx-background-radius: 50;">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="116.0" text="Weather" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER_RIGHT" fillHeight="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgba(28, 81, 134, 1);">
+               <children>
+                  <Label prefHeight="22.0" prefWidth="250.0" text="Privacy Policy | Energy FM © 2025" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>
