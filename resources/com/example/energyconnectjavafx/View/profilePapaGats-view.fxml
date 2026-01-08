@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane layoutX="-2.0" layoutY="-2.0" prefHeight="1080.0" prefWidth="1459.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.energyconnectjavafx.Controller.ProfilePapaGatsController">
+ <content>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1058.0" prefWidth="1460.0">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="703.0" prefHeight="52.0" prefWidth="1619.0" style="-fx-background-color: #454E57;">
+         <children>
+            <AnchorPane layoutX="13.0" layoutY="24.0" prefWidth="86.0" />
+         </children>
+      </AnchorPane>
+            <ImageView fitHeight="735.0" fitWidth="1662.0" layoutX="-59.0" layoutY="-30.0" pickOnBounds="true" preserveRatio="true">
+             <effect>
+                  <DropShadow />
+              </effect>
+               <image>
+                  <Image url="@../Images/header_home.png" />
+               </image>
+            </ImageView>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane layoutX="2.0" layoutY="985.0" prefHeight="74.0" prefWidth="1459.0" style="-fx-background-color: #1C5186;">
+               <children>
+            <Text fill="WHITE" layoutX="1179.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Privacy Policy | Energy FM © 2025" wrappingWidth="250.42926788330072">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+               </children></AnchorPane>
+      <AnchorPane layoutX="-2.0" layoutY="-13.94921875" />
+      <Text fx:id="realNameText" layoutX="598.0" layoutY="918.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="278.2867736816406">
+         <font>
+            <Font name="System Italic" size="28.0" />
+         </font>
+      </Text>
+      <Text fx:id="djNicknameText" layoutX="608.0" layoutY="862.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: Segoe UI; -fx-font-weight: 900; -fx-font-size: 50px;" wrappingWidth="292.4393310546875">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="logoHomepage" fitHeight="85.0" fitWidth="154.0" layoutX="25.0" layoutY="9.0" onMouseClicked="#goToHomepage" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@../Images/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="menuButton" onMouseClicked="#toggleNavMenu" style="-fx-cursor: hand;" fitHeight="21.0" fitWidth="24.0" layoutX="1394.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/menu.png" />
+         </image>
+      </ImageView>
+            <VBox fx:id="navMenu" visible="false" managed="false" layoutX="1260.0" layoutY="80.0" prefHeight="136.0" prefWidth="162.0" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-padding: 8px; -fx-background-radius: 5px;">
+               <children>
+                  <Text fx:id="aboutPageNav" layoutX="10.0" layoutY="30.0" onMouseClicked="#goToAbout" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="About" textAlignment="CENTER" wrappingWidth="152.62521362304688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="profilesPageNav" onMouseClicked="#goToMainProfile" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="Profiles" textAlignment="CENTER" wrappingWidth="152.62521362304688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="programsPageNav" layoutX="10.0" layoutY="56.0" onMouseClicked="#goToPrograms" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="Programs" textAlignment="CENTER" wrappingWidth="152.62521362304688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="streamPageNav" layoutX="10.0" layoutY="82.0" onMouseClicked="#goToStream" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="Stream" textAlignment="CENTER" wrappingWidth="152.62521362304688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="newsPageNav" layoutX="10.0" layoutY="108.0" onMouseClicked="#goToNews" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 900; -fx-cursor: hand; -fx-font-size: 18px;" text="News" textAlignment="CENTER" wrappingWidth="152.62521362304688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+               <effect>
+                  <DropShadow radius="4.75" width="0.0" />
+               </effect>
+            </VBox>
+            <ImageView fx:id="djPicture" fitHeight="577.0" fitWidth="444.0" layoutX="513.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+            <ImageView fx:id="leftButton" fitHeight="51.0" fitWidth="56.0" layoutX="404.0" layoutY="325.0" onMouseClicked="#goToPreviousDJ" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@../Images/leftbutton.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rightButton" fitHeight="48.0" fitWidth="63.0" layoutX="1026.0" layoutY="326.0" onMouseClicked="#goToNextDJ" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@../Images/rightbutton.png" />
+               </image>
+            </ImageView>
+   </children>
+</AnchorPane>
+</content>
+</ScrollPane>
